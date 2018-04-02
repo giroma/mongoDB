@@ -17,16 +17,16 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
   //   console.log(JSON.stringify(result.ops, undefined, 2));
   // });
 
-  // db.collection('Users').insertOne({
-  //   name: 'arisutur',
-  //   age: 342,
-  //   location: 'tdot oh oh'
-  // }, (err, result) => {
-  //   if (err) {
-  //     return console.log('unable to insert user', err);
-  //   }
-  //   console.log(result.ops[0]._id.getTimestamp());
-  // })
+  db.collection('Users').insertOne({
+    name: 'cait',
+    age: 55,
+    location: 'wels'
+  }, (err, result) => {
+    if (err) {
+      return console.log('unable to insert user', err);
+    }
+    console.log(result.ops[0]._id.getTimestamp());
+  })
 
   client.close()
 })
